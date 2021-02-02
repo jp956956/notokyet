@@ -20,6 +20,7 @@
                   v-for="attr in attributes"
                   class="text-xs leading-tight rounded-sm p-1 mt-0 mb-1"
                   :class="attr.customData.class"
+                  :key="attr"
                 >
                   {{ attr.customData.title }}
                 </p>
