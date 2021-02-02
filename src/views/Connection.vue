@@ -1,7 +1,7 @@
 <template>
   <b-container class="mt-5">
     <b-row>
-      <b-col v-for="item in items" cols="3">
+      <b-col v-for="item in items" :key="item" cols="3">
           <b-card
             :title="item.title"
             :img-src="item.img"
