@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-header">
         <ol>
-          <li v-for="item in todayPlay.record">{{ item.content[0].detail[0].isgood }} {{ item.content[0].detail[0].speed }}km {{ item.content[0].detail[0].type }}<span class="badge badge-pill badge-primary">{{ item.content[0].detail[0].description }}</span></li>
+          <li v-for="item in todayPlay.record" :key="item">{{ item.content[0].detail[0].isgood }} {{ item.content[0].detail[0].speed }}km {{ item.content[0].detail[0].type }}<span class="badge badge-pill badge-primary">{{ item.content[0].detail[0].description }}</span></li>
         </ol>
     </div>
   <div class="card-body">
@@ -31,14 +31,14 @@
 <script>
 export default {
   name: 'current',
-  computed : {
+  computed: {
     // 如果沒有今天日期的對戰資料，就跑新增頁面
     todayPlay () {
       return this.$store.state.what
     }
   },
   props: {
-    plays: Object,
+    plays: Object
   }
 }
 </script>

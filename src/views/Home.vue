@@ -28,7 +28,7 @@
         caption=""
         img-src="@/assets/林安可.jpg"
       ></b-carousel-slide>
-      
+
       <b-carousel-slide
         caption=""
         img-src="@/assets/富邦.jpg"
@@ -70,6 +70,5 @@ export default {
     justify-content: center;
     height: 100%;
   }
-
 
 </style>

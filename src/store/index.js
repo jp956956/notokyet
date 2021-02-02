@@ -15,13 +15,13 @@ export default new Vuex.Store({
       place: '',
       home: '',
       away: '',
-      record: []     
+      record: []
     },
     cart: []
   },
   mutations: {
     logout (state) {
-      state.user.name = '',
+      state.user.name = ''
       state.user.id = ''
     },
     login (state, data) {

@@ -9,7 +9,7 @@
           <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
             <b-card-body>
               <ol>
-                <li v-for="item in todayPlay.record">{{ item.content[0].detail[0].isgood }} {{ item.content[0].detail[0].speed }}km {{ item.content[0].detail[0].type }}<span class="badge badge-pill badge-primary">{{ item.content[0].detail[0].description }}</span></li>
+                <li v-for="item in todayPlay.record" :key="item">{{ item.content[0].detail[0].isgood }} {{ item.content[0].detail[0].speed }}km {{ item.content[0].detail[0].type }}<span class="badge badge-pill badge-primary">{{ item.content[0].detail[0].description }}</span></li>
               </ol>
             </b-card-body>
           </b-collapse>
@@ -40,7 +40,7 @@ export default {
       ]
     }
   },
-  computed : {
+  computed: {
     // 如果沒有今天日期的對戰資料，就跑新增頁面
     todayPlay () {
       return this.$store.state.what

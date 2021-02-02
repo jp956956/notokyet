@@ -10,7 +10,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: '中華職棒大檸檬',
+      title: '中華職棒大檸檬'
     }
   },
   {

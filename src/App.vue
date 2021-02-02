@@ -68,7 +68,7 @@
       </b-navbar>
     <div id="center">
         <router-view/>
-    </div> 
+    </div>
     <div>
       <footer class="bg-primary text-center text-lg-start">
         <!-- Copyright -->
@@ -80,7 +80,6 @@
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -100,7 +99,7 @@ export default {
     accountState () {
       if (this.account.length === 0) {
         return null
-      } else if ( this.account.length >= 4 && this.account.length <= 20) {
+      } else if (this.account.length >= 4 && this.account.length <= 20) {
         return true
       } else {
         return false
@@ -109,13 +108,13 @@ export default {
     passwordState () {
       if (this.password.length === 0) {
         return null
-      } else if ( this.password.length >= 4 && this.password.length <= 20) {
+      } else if (this.password.length >= 4 && this.password.length <= 20) {
         return true
       } else {
         return false
-      }      
+      }
     }
-    
+
   },
   methods: {
     buyList () {
@@ -157,17 +156,17 @@ export default {
           alert(error.response.data.message)
         })
     },
-    heartbeat() {
+    heartbeat () {
       this.axios.get(process.env.VUE_APP_API + '/users/heartbeat')
         .then(res => {
-          if ( this.user.id.length > 0) {
+          if (this.user.id.length > 0) {
             if (!res.data) {
               alert('請重新登入')
               this.$store.commit('logout')
             }
           }
         })
-        .catch(error => {
+        .catch(() => {
           alert('錯誤')
           this.$store.commit('logout')
         })

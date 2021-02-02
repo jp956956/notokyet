@@ -15,12 +15,12 @@
       <div></div>
     </div>
   </div>
-  
+
 </template>
 
 <script>
 export default {
-  name: "board",
+  name: 'board',
   props: {
     plays: Object
   }
@@ -46,7 +46,7 @@ export default {
     font-size: 2.5rem;
     font-weight: bold;
     color: white;
-    
+
   }
   .right {
     display: flex;

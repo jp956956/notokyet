@@ -150,7 +150,6 @@
 
 import score from '../components/score'
 import current from '../components/current'
-import Current from '../components/current.vue'
 import everyRound from '../components/everyRound.vue'
 import board from '../components/board.vue'
 
@@ -193,7 +192,7 @@ export default {
         away: '',
         record: []
       },
-      // 表單內容      
+      // 表單內容
       form: {
         score: {
           homeget: '0',
@@ -220,7 +219,7 @@ export default {
       pitchers: [{ text: '選擇投手', value: null }, '王鏡銘', '江辰晏', '江承峰', '陳韻文', '傅于剛', '黃竣彥', '劉軒荅', '潘威倫', '鄭鈞仁'],
       hitters: [{ text: '選擇打者', value: null }, '江亮緯', '吳桀睿', '林安可', '林祖傑', '林靖凱', '唐肇廷'],
       types: [{ text: '選擇球種', value: null }, '直球', '指叉球', '伸卡球', '滑球', '曲球', '卡特球'],
-      teams: [{ text: '選擇球隊', value: null}, "統一獅", "中信兄弟", "樂天桃猿", "富邦悍將", "味全龍"],
+      teams: [{ text: '選擇球隊', value: null }, '統一獅', '中信兄弟', '樂天桃猿', '富邦悍將', '味全龍']
     }
   },
   methods: {
@@ -242,7 +241,7 @@ export default {
       event.preventDefault()
     }
   },
-  computed : {
+  computed: {
     // 如果沒有今天日期的對戰資料，就跑新增頁面
     todayPlay () {
       return this.$store.state.what
@@ -256,4 +255,3 @@ export default {
   }
 }
 </script>
-
